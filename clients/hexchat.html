@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desert Bus Using HexChat</title>
+</head>
+<body>
+    <h1>Using HexChat to Access the Desert Bus Chat</h1>
+    <p>HexChat is a cross-platform client that is simple to use. You can download it at <a href="http://HexChat.github.io/">HexChat.github.io</a>.</p>
+    <p>In this guide, we'll assume you've installed the latest version of HexChat (2.9.6.1) and selected the <samp>Normal Installation</samp> bundle, though older versions or different bundles should work as well.</p>
+    
+    <ul class="table-of-contents">
+        <li><a href="#initialsetup">Initial Setup</a></li>
+        <li><a href="#networksetup">Network Setup</a>
+        <li><a href="#autoconnect">Automatically Connect On Startup</a></li>
+        <li><a href="#autoidentify">Automatically Identify To Your Donor Account</a></li>
+        <li><a href="#finishing">Finishing Up</a></li>
+        <li><a href="#hidejoinpart">Hiding Joins And Parts In #DesertBus</a></li>
+    </ul>
+
+    <h2 id="initialsetup">Setting Up HexChat For The First Time</h2>
+
+    <img src="images/HexChat/network_list.png" alt="HexChat Network List Prompt">
+
+    <p>When running HexChat for the first time, you should be presented a screen like the one above.
+        There is a lot of important information on this screen, so let's break it down.</p>
+
+    <p><strong>Nick name:</strong> This is the name other users will see you as.
+        By default it is your computer's user name, but you can set it to whatever you like that doesn't have any spaces.</p>
+
+    <p><strong>Second choice:</strong> If somebody has already claimed your nick name, this will be used instead.
+        The same rules apply as the nick name.</p>
+
+    <p><strong>Third choice:</strong> I think you get it by now.</p>
+
+    <p><strong>User name:</strong> While this is meaningful to IRC servers, it doesn't really matter that much.
+        You can just set it to the same thing as your nick name and not worry about it.</p>
+
+    <p><strong>Networks:</strong> This is a list of every IRC network HexChat knows about.
+        You can select one from this list and press <strong>Connect</strong> to join the network and start chatting.
+        However, HexChat doesn't know about the Desert Bus network yet, so we have to set that up first.</p>
+
+
+    <h2 id="networksetup">Setting Up The Desert Bus Network</h2>
+
+    <p>On the network list screen (pictured above), press <strong>Add</strong> to create a new network.
+        This will add an entry to the network list with the default name of <samp>New Network</samp>, and give you an option to edit it.
+        Enter a desired name, for instance <samp>Desert Bus</samp>, and press enter to save your changes.
+        If you accidentally click elsewhere or press enter and want to edit the network name again, double click the entry.
+        By now you should see the following.</p>
+
+    <img src="images/HexChat/desertbus_network_entry.png" alt="HexChat Network List Prompt with Desert Bus entry highlighted">
+
+    <p>Now, with your newly created network selected, press <strong>Edit</strong> to see the following screen.</p>
+
+    <img src="images/HexChat/edit_server_default.png" alt="HexChat Network Edit Prompt with default values">
+
+    <p>All you need to do is double click <samp>newserver/6667</samp> and change it to <samp>irc.desertbus.org/6667</samp>.
+        For extra security, you can set it to <samp>irc.desertbus.org/+6697</samp> instead.</p>
+
+    <img src="images/HexChat/edit_server_ip_changed.png" alt="HexChat Network Edit Prompt with IP changed">
+
+
+    <h2 id="autoconnect">Automatically Connecting To Desert Bus On Startup (Optional)</h2>
+
+    <p>To save yourself a few seconds you can configure HexChat to automatically connect to Desert Bus every time it starts up.
+        On the network edit screen, check the <strong>Connect to this network automatically</strong> checkbox as shown.</p>
+
+    <img src="images/HexChat/edit_server_autoconnect.png" alt="HexChat Network Edit Prompt with autoconnect enabled">
+
+    <p>You can also stop the network list from showing on startup by checking the <strong>Skip network list on startup</strong> checkbox on the network list screen as shown.</p>
+
+    <img src="images/HexChat/skip_network_list.png" alt="HexChat Network List Prompt with skipping enabled">
+
+
+    <h2 id="autoidentify">Automatically Identify To Your Donor Account (Optional)</h2>
+
+    <p>If you have a <a href="https://desertbus.org/donor">Desert Bus Donor Account</a> (and if you don't, <a href="https://desertbus.org/donor/sign-up">get one</a>) you can easily log in every time you connect to the network.
+        On the network edit screen select <samp>Sever Password (/PASS password)</samp> for <strong>Login method</strong>.
+        Then set <strong>Password</strong> to <samp>your_donor_account_email your_donor_account_password</samp>.
+        For example, I'd set mine to <samp>fugi@not-fugiman.com this_isn't_my_real_password</samp>.</p>
+
+    <img src="images/HexChat/edit_server_login_changed.png" alt="HexChat Network Edit Prompt with login enabled">
+
+
+    <h2 id="finishing">Finally Connecting To The Desert Bus Network</h2>
+
+    <p>You're almost done!
+        On the network edit screen press <strong>Close</strong>, ensure <samp>Desert Bus</samp> is selected on the network list screen, and press <strong>Connect</strong>.
+        HexChat will connect to the server, but warn you that you haven't chosen any channels.</p>
+
+    <img src="images/HexChat/no_channel_selected.png" alt="HexChat No Channel Selected">
+
+    <p>This is not a problem!
+        By default, the server itself will put you in the #DesertBus channel, where all chatting happens.
+        Just uncheck the <strong>Always show this dialog after connecting</strong> checkbox to get rid of this annoyance.</p>
+
+    <img src="images/HexChat/no_channel_selected_unchecked.png" alt="HexChat No Channel Selected Unchecked">
+
+    <p>That's it, you're in.
+        Welcome to the party!</p>
+
+    <img src="images/HexChat/main_window.png" alt="HexChat Main Window">
+
+    <h2 id="hidejoinpart">Hiding Joins And Parts In #DesertBus</h2>
+
+    <p>With so many people in the chat there are bound to be quite a few joining and leaving constantly.
+        To remove the clutter of these messages, right click <strong>#desertbus</strong> on the left side of your screen.
+        Hover over <strong>Settings</strong> to bring up an additional menu, then click on <strong>Hide Join/Part Messages</strong>.</p>
+
+    <img src="images/HexChat/hide_joins_and_parts.png" alt="HexChat Hide Join/Part Messages Selector">
+
+    <p>This will hide the messages for the current session.
+        To hide join and part messages for future sessions, select <strong>Settings</strong> in the menu bar.</p>
+
+    <img src="images/HexChat/settings.png" alt="HexChat Settings">
+
+    <p>In the Settings window, select the <strong>General</strong> tab underneath <strong>Chatting</strong>.
+        On this screen, check the <strong>Hide join and part messages</strong> checkbox.</p>
+
+    <img src="images/HexChat/general_chatting_settings.png" alt="HexChat Settings - Chatting - General">
+
+</body>
+</html>
