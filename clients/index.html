@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Desert Bus With An IRC Client</title>
+	<style type="text/css">
+		.setupdata {
+			margin-left: 15px;
+		}
+		.dataheader {
+			font-weight: 700;
+		}
+		.data {
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	<h1>Using an IRC Client</h1>
+	<p>Using your own IRC client is a great way to experience the wonders of
+		Desert Bus Chat while still feeling right at home in your own IRC
+		client.  Unless you're new to IRC clients and downloading one for this
+		purpose, in which case... Actually, we've got you covered, too.</p>
+	<p>You should find detailed instructions specific to your IRC client below.
+		(<a href="#tips">"Why? I already know how to do everything!  Just give
+		me the information I need!"</a>)</p>
+	<ul>
+		<li><a href="jircs.html">jIRCs Web Client (easy mode)</a></li>
+		<li><a href="kvirc.html">KVIrc</a></li>
+	</ul>
+	<p>If your IRC client isn't on the list, nobody created this documentation
+		for it!  Hopefully you already know your way around or can figure out
+		how to do the things in the Tips section below.</p>
+	<h2 id="tips">Information And Tips</h2>
+	<h3>Basic Setup</h3>
+	<p class="setupdata"><span class="dataheader">Network:</span> <span class="data">irc.desertbus.org</span></p>
+	<p class="setupdata"><span class="dataheader">Port:</span> <span class="data">6667</span></p>
+	<p class="setupdata"><span class="dataheader">SSL Port:</span> <span class="data">6697</span></p>
+	<h3>Autoidentify To Your Donor Account</h3>
+	<p>We provide three methods of automatically identifying to NickServ.</p>
+	<h4>SASL Authentication</h4>
+	<p>SASL Authentication is a secure way to authenticate, and it's one of the
+		easiest to set up if your client supports it.  You'll use the email
+		address linked to your donor account as your username, and your donor
+		account password is your password.</p>
+	<h4>Autoidentify to NickServ</h4>
+	<p>Most clients provide a password box to fill in your NickServ password,
+		which is used to send your password to NickServ automatically when you
+		connect to the network.  Unfortunately, just your password is not enough
+		to identify you in our unique system.  You may fill in your password in
+		this box in one of two ways:
+		<ul>
+			<li><span class="data">email@address.com:password</span> with a colon between the
+				email address and the password</li>
+			<li><span class="data">email@address.com password</span> with a space between the
+				email address and the password</li>
+		</ul>
+	</p>
+	<h4>Autoidentify With The Server Password</h4>
+	<p>Some people prefer to identify using the server password on connect
+		because it activates immediately rather than having to wait for NickServ
+		to respond (not that NickServ is slow, though).  Either of the formats
+		given above that can be placed in the NickServ identify box can be
+		placed in the server password box instead.  Just make sure not to do
+		both.</p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Desert Bus - Using BidServ</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+		td {
+			border: 1px solid #000;
+			padding: 2px;
+		}
+		.explain-syntax {
+			white-space: pre;
+			font-family: monospace;
+		}
+		.note-important {
+			font-weight: 700;
+		}
+	</style>
+</head>
+<body>
+	<h1>Using BidServ</h1>
+	<p>It's auction time!  How do I bid?  What's even going on?  This page is
+		here to answer your BidServ-related questions.</p>
+	<p>You can tell BidServ that you want to bid or ask it about the current
+		state of the auction by giving commands.  These commands will go to
+		BidServ.  BidServ will act on your bid or give you the information you
+		desire in response.  The following commands are available:</p>
+	<table id="bidserv-commands">
+		<tr><th>Command</th><th>Syntax</th><th>Details</th></tr>
+		<tr>
+			<td>BID</td>
+			<td class="explain-syntax">/bid ###.## [smack talk]</td>
+			<td>This command will place a bid.  <strong>Do not use this command
+				unless you really want to bid.  Fake bids are taken seriously
+				and may result in permanent removal from the IRC channel, or
+				worse.</strong>  In place of the ###.##, just fill in your bid
+				amount.  You may optionally include smack talk after your bid,
+				which will be displayed prominently for all to see.</td>
+		</tr>
+		<tr>
+			<td>HIGHBIDDER</td>
+			<td class="explain-syntax">/highbidder</td>
+			<td>This command shows you who has the highest bid in the current
+				auction, along with what that bid is.</td>
+		</tr>
+		<tr>
+			<td>CURRENTAUCTION</td>
+			<td class="explain-syntax">/currentauction</td>
+			<td>Did you just join the channel?  Are you otherwise totally lost
+				as to what is going on?  This command will tell you what item
+				is currently up for auction.</td>
+		</tr>
+	</table>
+	<p class="note-important">Note: In some clients, you may, when using the
+		commands listed above, be told that the commands do not exist.  This is
+		because your client blocks commands it assumes do not exist.  They do,
+		in fact, exist.  You'll need to execute these commands by using /quote
+		or /raw before the command; e.g. '/quote bid' instead of '/bid'.</p>
+</body>
+</html>
