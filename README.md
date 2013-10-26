@@ -8,4 +8,4 @@ and styled in accordance with the rest of the site.
 
 
 
-Special Thanks: Elemental Alchemist
+Special Thanks: ElementalAlchemist
