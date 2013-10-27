@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Desert Bus Using KVIrc</title>
-	<style type="text/css">
-		.itemdetail {
-			font-weight: 700;
-		}
-		.formentry {
-			font-family: monospace;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Desert Bus Using KVIrc</title>
+    <style type="text/css">
+        .itemdetail {
+            font-weight: 700;
+        }
+        .formentry {
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-	<h1>Using KVIrc to Access the Desert Bus Chat</h1>
-	<p>KVIrc is a cross-platform client with many features.  You can find it at
-		<a href="http://www.kvirc.net">its website</a>.</p>
-	<ul class="table-of-contents">
-		<li><a href="#initialsetup">Initial Setup</a></li>
-		<li><a href="#networksetup">Network Setup</a>
-			<ul>
-				<li><a href="#networksetup">Network Setup</a></li>
-				<li><a href="#autoconnect">Automatically Connect On Startup</a>
-					</li>
-				<li><a href="#serversetup">Server Setup</a></li>
-				<li><a href="#autoidentify">Automatically Identify To Your Donor
-					Account</a></li>
-			</ul>
-		</li>
-		<li><a href="#finishing">Finishing Up</a></li>
-		<li><a href="#hidejoinpart">Hiding Joins and Parts in #desertbus</a>
-			</li>
-	</ul>
-	<h2 id="initialsetup">Setting up KVIrc the First Time</h2>
-	<p>If you're running the client for the first time, you'll want to set up
-		a default nickname and ident (username).  Navigate to
-		<span class="itemdetail">Settings > Configure KVIrc...</span> and open
-		the Identity section:</p>
-	<img src="images/kvirc/settings_identity.png"
-		alt="Navigate to the Identity section">
-	<p>You'll want to fill in a default Nickname, Username, and Real name.
-		This doesn't have to be your actual real name.  You may put in whatever
-		you like for these fields.  Realize that the nick and the username
-		cannot contain spaces.  The rest of the fields here and in the other
-		tabs in the Identity section are optional.  You may fill them out if you
-		wish.</p>
-	<h2>Setting Up the Desert Bus IRC Network</h2>
-	<p>Before you get connected, you'll want to set up the server connection.
-		This allows you to save the server to easily connect to it in the future
-		or set it up to automatically connect when you start the client.  This
-		process consists of setting up the network and the server, and
-		optionally also consists of setting up to automatically connect to the
-		network and setting up autoidentification to your Desert Bus Donor
-		Account.</p>
-	<h3 id="networksetup">Network Setup</h3>
-	<p>To do this, go to <span class="itemdetail">Settings > Configure
-		Servers...</span>.  When the dialog opens, click the New Network icon:
-		</p>
-	<img src="images/kvirc/new_network.png" alt="KVIrc New Network Icon">
-	<p>This creates and automatically selects an entry titled "New Network."
-		Type in an appropriate name in the box below (e.g. "Desert Bus").</p>
-	<h3 id="autoconnect">Autoconnect</h3>
-	<p>If you'd like to automatically connect to the network when you start
-		KVIrc, click on the <span class="itemdetail">Advanced...</span> button
-		and check the box marked <span class="itemdetail">Connect to this
-		network at startup</span>.</p>
-	<img src="images/kvirc/autoconnect.png"
-		alt="Autoconnect to Desert Bus Chat">
-	<p>No further settings must be adjusted.  The empty boxes will pull the
-		default nickname/username information you already entered from the
-		global settings.</p>
-	<h3 id="serversetup">Server Setup</h3>
-	<p>With the new network created, click the "New Server" icon:</p>
-	<img src="images/kvirc/new_server.png" alt="KVIrc New Server Icon">
-	<p>A server called "irc.unknown.net" will be created and automatically
-		selected.  In the box at the bottom of the dialog box, change the name
-		to <span class="formentry">irc.desertbus.org</span> and click on the
-		<span class="itemdetail">Advanced...</span> button.</p>
-	<p>The first tab that opens is the identity tab.  All of these boxes can be
-		left blank; unless you change them, they will pull in the information
-		from your default nickname/username settings, which you already set up.
-		</p>
-	<p>If you would rather connect using SSL, navigate to the Connection tab.
-		Set the port to <span class="formentry">6697</span> and check the
-		<span class="itemdetail">Use SSL Protocol</span> box.</p>
-	<img src="images/kvirc/enable_ssl.png" alt="Enabling SSL">
-	<h3 id="autoidentify">Automatically Identify To Your Donor Account</h3>
-	<p>If you have a <a href="https://www.desertbus.org/donor">Desert Bus Donor
-		Account, you will want to set up automatic</a> identification so that
-		you are automatically identified to your account when you connect and
-		can easily take advantage of the benefits being identified will give you
-		(being able to bid, etc.) without going through more hassle later.  In
-		order to do this, navigate to the <span class="itemdetail">Advanced
-		</span> tab of the server setup.  In order to auto-identify, you need to
-		check the <span class="itemdetail">Query extended capabilities on
-		connect</span> and the <span class="itemdetail">Authenticate via SASL
-		extension</span> boxes.  Your <span class="itemdetail">Sasl Nickname
-		</span> is the email address you use to log into your Donor Account, and
-		your <span class="itemdetail">Sasl Password</span> is your Donor Account
-		password.</p>
-	<img src="images/kvirc/autoidentify.png"
-		alt="Autoidentify to your Donor Account">
-	<h2 id="finishing">Finishing Up</h2>
-	<p>You're done setting up!  Click <span class="itemdetail">OK</span> in your
-		Server Details dialog, and then click the giant blue
-		<span class="itemdetail">Connect Now</span> button.  The server is set
-		up, and you're now connected to the chat!</p>
-	<p>To connect in the future (unless you set up autoconnect), find the
-		<span class="itemdetail">Desert Bus</span> (or whatever you named it)
-		server in the server tree on the left side of your screen, select it,
-		and click the <span class="itemdetail">Connect</span> button on the top.
-		</p>
-	<img src="images/kvirc/button_connect.png" alt="Connect Button">
-	<h2 id="hidejoinpart">Hiding Joins and Parts in #desertbus</h2>
-	<p>Desert Bus is a crazy time.  Lots of people go in and out of the channel,
-		and all the join/part notices can get in the way of the chatting going
-		on.  You can move non-messages (joins, parts, mode changes, etc.) to a
-		separate pane from the conversation by clicking the
-		<span class="itemdetail">Split View</span> icon on the top-right of the
-		window.  This moves joins/parts/etc. out of the way of text.  You may
-		shrink the joins/parts/etc. pane to focus on the conversation.</p>
-	<img src="images/kvirc/split_view.png"
-		alt="Split View to focus on the conversation">
+    <h1>Using KVIrc to Access the Desert Bus Chat</h1>
+    <p>KVIrc is a cross-platform client with many features.  You can find it at
+        <a href="http://www.kvirc.net">its website</a>.</p>
+    <ul class="table-of-contents">
+        <li><a href="#initialsetup">Initial Setup</a></li>
+        <li><a href="#networksetup">Network Setup</a>
+            <ul>
+                <li><a href="#networksetup">Network Setup</a></li>
+                <li><a href="#autoconnect">Automatically Connect On Startup</a>
+                    </li>
+                <li><a href="#serversetup">Server Setup</a></li>
+                <li><a href="#autoidentify">Automatically Identify To Your Donor
+                    Account</a></li>
+            </ul>
+        </li>
+        <li><a href="#finishing">Finishing Up</a></li>
+        <li><a href="#hidejoinpart">Hiding Joins and Parts in #desertbus</a>
+            </li>
+    </ul>
+    <h2 id="initialsetup">Setting up KVIrc the First Time</h2>
+    <p>If you're running the client for the first time, you'll want to set up
+        a default nickname and ident (username).  Navigate to
+        <span class="itemdetail">Settings > Configure KVIrc...</span> and open
+        the Identity section:</p>
+    <img src="images/kvirc/settings_identity.png"
+        alt="Navigate to the Identity section">
+    <p>You'll want to fill in a default Nickname, Username, and Real name.
+        This doesn't have to be your actual real name.  You may put in whatever
+        you like for these fields.  Realize that the nick and the username
+        cannot contain spaces.  The rest of the fields here and in the other
+        tabs in the Identity section are optional.  You may fill them out if you
+        wish.</p>
+    <h2>Setting Up the Desert Bus IRC Network</h2>
+    <p>Before you get connected, you'll want to set up the server connection.
+        This allows you to save the server to easily connect to it in the future
+        or set it up to automatically connect when you start the client.  This
+        process consists of setting up the network and the server, and
+        optionally also consists of setting up to automatically connect to the
+        network and setting up autoidentification to your Desert Bus Donor
+        Account.</p>
+    <h3 id="networksetup">Network Setup</h3>
+    <p>To do this, go to <span class="itemdetail">Settings > Configure
+        Servers...</span>.  When the dialog opens, click the New Network icon:
+        </p>
+    <img src="images/kvirc/new_network.png" alt="KVIrc New Network Icon">
+    <p>This creates and automatically selects an entry titled "New Network."
+        Type in an appropriate name in the box below (e.g. "Desert Bus").</p>
+    <h3 id="autoconnect">Autoconnect</h3>
+    <p>If you'd like to automatically connect to the network when you start
+        KVIrc, click on the <span class="itemdetail">Advanced...</span> button
+        and check the box marked <span class="itemdetail">Connect to this
+        network at startup</span>.</p>
+    <img src="images/kvirc/autoconnect.png"
+        alt="Autoconnect to Desert Bus Chat">
+    <p>No further settings must be adjusted.  The empty boxes will pull the
+        default nickname/username information you already entered from the
+        global settings.</p>
+    <h3 id="serversetup">Server Setup</h3>
+    <p>With the new network created, click the "New Server" icon:</p>
+    <img src="images/kvirc/new_server.png" alt="KVIrc New Server Icon">
+    <p>A server called "irc.unknown.net" will be created and automatically
+        selected.  In the box at the bottom of the dialog box, change the name
+        to <span class="formentry">irc.desertbus.org</span> and click on the
+        <span class="itemdetail">Advanced...</span> button.</p>
+    <p>The first tab that opens is the identity tab.  All of these boxes can be
+        left blank; unless you change them, they will pull in the information
+        from your default nickname/username settings, which you already set up.
+        </p>
+    <p>If you would rather connect using SSL, navigate to the Connection tab.
+        Set the port to <span class="formentry">6697</span> and check the
+        <span class="itemdetail">Use SSL Protocol</span> box.</p>
+    <img src="images/kvirc/enable_ssl.png" alt="Enabling SSL">
+    <h3 id="autoidentify">Automatically Identify To Your Donor Account</h3>
+    <p>If you have a <a href="https://www.desertbus.org/donor">Desert Bus Donor
+        Account, you will want to set up automatic</a> identification so that
+        you are automatically identified to your account when you connect and
+        can easily take advantage of the benefits being identified will give you
+        (being able to bid, etc.) without going through more hassle later.  In
+        order to do this, navigate to the <span class="itemdetail">Advanced
+        </span> tab of the server setup.  In order to auto-identify, you need to
+        check the <span class="itemdetail">Query extended capabilities on
+        connect</span> and the <span class="itemdetail">Authenticate via SASL
+        extension</span> boxes.  Your <span class="itemdetail">Sasl Nickname
+        </span> is the email address you use to log into your Donor Account, and
+        your <span class="itemdetail">Sasl Password</span> is your Donor Account
+        password.</p>
+    <img src="images/kvirc/autoidentify.png"
+        alt="Autoidentify to your Donor Account">
+    <h2 id="finishing">Finishing Up</h2>
+    <p>You're done setting up!  Click <span class="itemdetail">OK</span> in your
+        Server Details dialog, and then click the giant blue
+        <span class="itemdetail">Connect Now</span> button.  The server is set
+        up, and you're now connected to the chat!</p>
+    <p>To connect in the future (unless you set up autoconnect), find the
+        <span class="itemdetail">Desert Bus</span> (or whatever you named it)
+        server in the server tree on the left side of your screen, select it,
+        and click the <span class="itemdetail">Connect</span> button on the top.
+        </p>
+    <img src="images/kvirc/button_connect.png" alt="Connect Button">
+    <h2 id="hidejoinpart">Hiding Joins and Parts in #desertbus</h2>
+    <p>Desert Bus is a crazy time.  Lots of people go in and out of the channel,
+        and all the join/part notices can get in the way of the chatting going
+        on.  You can move non-messages (joins, parts, mode changes, etc.) to a
+        separate pane from the conversation by clicking the
+        <span class="itemdetail">Split View</span> icon on the top-right of the
+        window.  This moves joins/parts/etc. out of the way of text.  You may
+        shrink the joins/parts/etc. pane to focus on the conversation.</p>
+    <img src="images/kvirc/split_view.png"
+        alt="Split View to focus on the conversation">
 </body>
 </html>
