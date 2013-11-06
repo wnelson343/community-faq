@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desert Bus Using mIRC</title>
+</head>
+<body>
+<div id="hexchat_irc_guide">
+    <h1>Using mIRC to Access the Desert Bus Chat</h1>
+    <p>mIRC is a Windows client that is simple to use. You can download it <a href="http://www.mirc.com/?/" target="_blank">here</a>. The latest version at the moment of writing this is 7.32, but older versions will work as well.</p>
+    
+    <ul class="table-of-contents">
+        <li><a href="#initialsetup">Initial Setup</a></li>
+        <li><a href="#networksetup">Network Setup</a></li>
+		<li><a href="#autoconnect">Connecting Automatically</a></li>
+		<li><a href="#hidejoinpart">Hiding Joins and Parts</a></li>
+		<li><a href="#sslsetup">Connecting securely</a></li>
+    </ul>
+
+    <h2 id="initialsetup">Setting Up mIRC For The First Time</h2>
+
+    <img src="images/mirc/options_screen.png" alt="mIRC Options Screen">
+
+    <p>After installing mIRC and running it for the first time, the options screen will pop up. Here a number of things can be put in.</p>
+	<p><strong>Nickname: </strong>This is the name you will be using in the chat. </p>
+	<p><strong>Alternative: </strong>This is the nickname that will be used if your first nickname is already taken. </p>
+	<p><strong>Name and Email: </strong>These are not important to us since they are optional and as such can be left empty.</p>
+
+    <h2 id="networksetup">Setting Up The Desert Bus Network</h2>
+
+    <p>On the Options screen that you see above you can click on <strong>Servers</strong> under <strong>Connect</strong>. This will take you to the screen you see below.</p>
+
+    <img src="images/mirc/server_select.png" alt="mIRC Server Select">
+
+    <p>On this screen you can see that a large number of servers is already present and we will add the Desert Bus server to this list. To do this you click <strong>Add</strong>. This will take you to the following screen:</p>
+	
+    <img src="images/mirc/new_server_empty.png" alt="mIRC Add Server Window Empty">
+
+    <p>On this screen the following things are important:</p>
+	<p><strong>Description: </strong>This is the name the server will get in the server list. We'll set it to "<samp>DesertBus</samp>", though it doesn't really matter what you call it. It will work all the same.</p>
+	<p><strong>IRC Server: </strong>This is the IP for the server. Set it to "<samp>irc.desertbus.org</samp>".
+	<p><strong>Ports: </strong>This is the port mIRC will connect to. You can leave it at the default "<samp>6667</samp>". If you want extra security, you can use port "<samp>+6697</samp>", but you will need to have OpenSSL installed. If you want to know more about this, refer to "<a href="#sslsetup">How to connect using SSL</a>".</p>
+	<p><strong>Password: </strong>If you have a <a href="https://desertbus.org/donor" target="_blank">Desert Bus Donor Account</a> (and if you don't, <a href="https://desertbus.org/donor/sign-up" target="_blank">get one</a>) you can easily log in automatically every time you connect to the server. The password you put here will be: "<samp>Donoremail Password</samp>". For example, mine could be "<samp>heufneutje@dontspam.com testpass123</samp>".</p>
+	
+	<p>After adding all this your window should look like this:</p>
+	
+    <img src="images/mirc/new_server_filled.png" alt="mIRC Add Server Window Filled">
+	
+	<p>Now you can click <strong>Add</strong> and your server should show up in the list.</p>
+	
+	<img src="images/mirc/server_select_dbselected.png" alt="mIRC Server Select Desert Bus Selected">
+	
+	<p>You are now done setting up the server! All you need to do now is click <strong>Select</strong>.</p>
+
+	
+    <h2 id="autoconnect">Automatically Connecting To Desert Bus On Startup (Optional)</h2>
+
+    <p>To save yourself a few seconds you can configure mIRC to automatically connect to Desert Bus every time it starts up. To do this, you click <strong>Options</strong> under the <strong>Connect</strong> group
+	on the options screen as seen below.</p>
+
+	<img src="images/mirc/irc_options_initial.png" alt="mIRC Initial Options Screen">
+
+	<p>Here you can check <strong>Connect on startup</strong> to make mIRC connect to the server every time you start it. Here you can also uncheck <strong>Show connect on startup</strong> so that the options screen does
+	not pop up every time you start mIRC.</p>
+	
+	<img src="images/mirc/irc_options_changed.png" alt="mIRC Options Changed">
+	
+    <h2 id="finishing">Finally Connecting To The Desert Bus Network</h2>
+
+    <p>You're almost done! On options screen press <strong>OK</strong> and click the button with the lightning bolt on it to connect.</p>
+	
+    <img src="images/mirc/connect_button.png" alt="mIRC Connect Button">
+
+    <p>You are now connected to the server. Now mIRC will show you the mIRC Favorites window and ask you to join a channel. This is not necessary, because the server will make you join the #desertbus channel automatically. To prevent this window from popping up in the future, you can uncheck <strong>Popup favorites on connect</strong> and hit <strong>OK</strong>.</p>
+
+    <img src="images/mirc/favorites_window.png" alt="mIRC Favorites Window">
+
+    <p>And that's it! Welcome to the chat!</p>
+
+    <img src="images/mirc/main_window.png" alt="mIRC Main Window">
+
+    <h2 id="hidejoinpart">Hiding Joins And Parts In #desertbus</h2>
+
+    <p>With so many people in the chat there are bound to be quite a few joining and leaving constantly.
+        To remove the clutter of these messages, right click the <strong>#desertbus</strong> tab at the top or on the left side of your screen. Now click <strong>Events...</strong>.</p>
+
+    <img src="images/mirc/main_window_hover_over_events.png" alt="mIRC Main Window Hover Over Events">
+
+    <p>This will bring up the window below. Here you can change which events you want to see and which events you want to be hidden.</p>
+	
+	<img src="images/mirc/events_window.png" alt="mIRC Events Window">
+	
+	<h2 id="sslsetup">How to connect using SSL</h2>
+	
+	<p>To be able to connect to the server securely, you will need OpenSSL. It can be downloaded <a href="http://www.mirc.com/ssl.html" target="_blank">here</a>. After you install it, you go back to the options screen. (<strong>Tools</strong> > <strong>Options...</strong>). Click on <strong>Options</strong> under <strong>Connect</strong>. If you installed OpenSSL correctly, the <strong>SSL...</strong> button should be available to click.</p>
+	
+	<img src="images/mirc/irc_options_ssl_highlighted.png" alt="mIRC Options SSL Highlighted">
+	
+	<p>This will pop up the SSL window. Here, under <strong>Certificates</strong>, you select <strong>Automatically accept invalid certificates</strong> and you hit <strong>OK</strong>.</p>
+	
+	<img src="images/mirc/ssl_window.png" alt="mIRC SSL Window">
+	
+	<p>The last thing you need to do is go back to <strong>Servers</strong>, select the DesertBus server and click <strong>Edit</strong>. All you need to do here is change the port to "<samp>+6697</samp>".</p>
+
+	<img src="images/mirc/new_server_port_changed.png" alt="mIRC Server Window Port Changed">
+	
+	<p>And that's it! You can connect to the server now.</p>
+</div>
+</body>
+</html>
