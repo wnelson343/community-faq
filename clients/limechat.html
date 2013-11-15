@@ -16,8 +16,7 @@
     
     <ul class="table-of-contents">
         <li><a href="#initialsetup">Initial Setup</a></li>
-        <li><a href="#serverconfig">More Server Configuration</a>
-        <li><a href="#autoidentify">Automatically Identify To Your Donor Account</a></li>
+        <li><a href="#serverconfig">Additional Configuration</a>
     </ul>
 
     <h2 id="initialsetup">Setting Up LimeChat For The First Time</h2>
@@ -36,26 +35,15 @@
     <p><strong>Connect on start up:</strong> Check this box if you want to automatically connect when LimeChat starts (recommended).</p>
 
 
-    <h2 id="serverconfig">More Server Configuration (Optional)</h2>
+    <h2 id="serverconfig">Additional Configuration (Optional, but Recommended)</h2>
 
     <p>Click the <samp>Server -> Server Properties</samp> menu item to open the server settings. You can change various server settings with this dialog.</p>
 
     <img src="images/limechat/server.png" alt="LimeChat Server Properties">
 
-    <p>If you want to use SSL (recommended), change the <strong>Port</strong> to <samp>6697</samp> and check the <strong>SSL connection</strong> checkbox.</p>
-    
-    <p>If you need to change your nick, update the <strong>Nickname</strong>, <strong>Login name</strong>, and <strong>Real name</strong> fields.</p>
+    <p>If you want to use SSL encryption, change the <strong>Port</strong> to <samp>6697</samp> and check the <strong>SSL connection</strong> checkbox.</p>
 
-
-    <h2 id="autoidentify">Automatically Identify To Your Donor Account (Optional)</h2>
-
-    <p>If you have a <a href="https://desertbus.org/donor" target="_blank">Desert Bus Donor Account</a> (and if you don't, <a href="https://desertbus.org/donor/sign-up" target="_blank">get one</a>) you can easily log in every time you connect to the network.</p>
-    
-    <p>Click the <samp>Server -> Server Properties</samp> menu item to open the server settings and navigate to the <strong>On Login</strong> tab.</p>
-
-    <img src="images/limechat/login.png" alt="LimeChat Login Command">
-    
-    <p>Enter <samp>"/msg NickServ login YourDonorEmailAddress YourDonorPassword"</samp> into the <strong>Perform commands on login</strong> text area, entering your donor e-mail and password as required.
+    <p>If you have a <a href="https://desertbus.org/donor" target="_blank">Desert Bus Donor Account</a> (and if you don't, <a href="https://desertbus.org/donor/sign-up" target="_blank">get one</a>) you can easily log in every time you connect to the network. Simply enter your donor e-mail address into the <strong>Login name</strong> field, your password into the <strong>Nickserv Password</strong> field, and click the <strong>Use SASL</strong> checkbox. If you need to change the nickname to match your registered nick, update the <strong>Nickname</strong> and <strong>Real name</strong> fields.</p>
 </div>
 </body>
 </html>
