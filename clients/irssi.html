@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desert Bus Using Irssi</title>
+    <style type="text/css">
+        #irssi_irc_guide .cmd { font-family: monospace; background: #eee; border: 1px solid #888; padding: 1px 4px; }
+        #irssi_irc_guide li { margin-top: 0.5em; margin-bottom: 0.5em; }
+        #irssi_irc_guide ol > li { margin-top: 1.5em; margin-bottom: 1.5em; }
+        #irssi_irc_guide .placeholder { color: red; }
+    </style>
+</head>
+<body>
+<div id="irssi_irc_guide">
+
+    <h1>Using Irssi to Access the Desert Bus Chat</h1>
+
+    <p>Irssi is a popular IRC client amongst enthusiasts, but not the easiest for new users.  If you use Irssi, here are some tips to get up and running with the Desert Bus Chat quickly.</p>
+
+    <ol>
+        <li>First, (optionally) add some handy aliases so that /bid and /ns etc. work as they should (the first is the most important):
+            <ul>
+                <li><span class="cmd">/alias bid quote bid</span></li>
+                <li><span class="cmd">/alias ns quote ns</span></li>
+                <li><span class="cmd">/alias login quote login</span></li>
+                <li><span class="cmd">/alias id quote id</span></li>
+                <li><span class="cmd">/alias bidserv quote bidserv</span></li>
+                <li><span class="cmd">/alias bs quote bs</span></li>
+            </ul>
+        </li>
+        <li>Add a network:
+            <ul>
+                <li><span class="cmd">/network add -nick <span class="placeholder">YourNickname</span> DesertBus</span></li>
+            </ul>
+        </li>
+        <li>Add the server:
+            <ul>
+                <li><span class="cmd">/server add -ssl -auto -network DesertBus irc.desertbus.org 6697 <span class="placeholder">your.email@example.com</span>:<span class="placeholder">secretpassword</span></span></li>
+            </ul>
+            &mdash; use the email address and password of your <b>donor account</b>
+            <p>Note: <span class="cmd">-auto</span> in this command tells Irssi to automatically connect to the Desert Bus chat on startup; if you would prefer not to do this, remove <span class="cmd">-auto</span></p>
+        </li>
+        <li>Optionally, to hide joins, quits, etc. on the chat (which gets very busy during Desert Bus):
+            <ul>
+                <li><span class="cmd">/ignore -channels #desertbus * JOINS PARTS QUITS NICKS</span></li>
+                <li><span class="cmd">/ignore -channels #desertbus ChanServ MODES</span></li>
+            </ul>
+        </li>
+        <li>Save your configuration:
+            <ul>
+                <li><span class="cmd">/save</span></li>
+            </ul>
+        </li>
+        <li>Connect:
+            <ul>
+                <li><span class="cmd">/connect DesertBus</span></li>
+            </ul>
+        </li>
+    </ol>
+
+    <p>You should now be in the Desert Bus chat; enjoy!</p>
+
+</div>
+
+</body>
+</html>
