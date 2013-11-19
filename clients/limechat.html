@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desert Bus Using LimeChat</title>
+    <style>
+        #limechat_irc_guide { max-width: 960px; }
+        #limechat_irc_guide img { max-width: 100%; }
+        samp { font-family: monospace; }
+    </style>
+</head>
+<body>
+<div id="limechat_irc_guide">
+    <h1>Using LimeChat to Access the Desert Bus Chat</h1>
+    <p>LimeChat is a free IRC client for Mac OS X. You can download it at <a href="http://limechat.net/mac/" target="_blank">limechat.net</a> or from the <a href="https://itunes.apple.com/us/app/limechat/id414030210?mt=12">Mac App Store</a>.</p>
+    
+    <ul class="table-of-contents">
+        <li><a href="#initialsetup">Initial Setup</a></li>
+        <li><a href="#serverconfig">Additional Configuration</a>
+    </ul>
+
+    <h2 id="initialsetup">Setting Up LimeChat For The First Time</h2>
+
+    <p>When running LimeChat for the first time, you should be presented a screen like the one below.</p>
+
+    <img src="images/limechat/setup.png" alt="LimeChat New Connection Dialog">
+
+    <p><strong>Your nickname:</strong> This is the name other users will see you as.
+        By default it is your user account's short name, but you can set it to whatever you like as long as it doesn't have any spaces.</p>
+
+    <p><strong>IRC server:</strong> Enter <samp>"irc.desertbus.org"</samp>.</p>
+
+    <p><strong>Channels:</strong> This is a list of channels that you will automatically join when you connect. Click the <strong>+</strong> and enter <samp>"#desertbus"</samp>. You might also want to add <samp>"#help"</samp> to this list as well.</p>
+    
+    <p><strong>Connect on start up:</strong> Check this box if you want to automatically connect when LimeChat starts (recommended).</p>
+
+
+    <h2 id="serverconfig">Additional Configuration (Optional, but Recommended)</h2>
+
+    <p>Click the <samp>Server -> Server Properties</samp> menu item to open the server settings. You can change various server settings with this dialog.</p>
+
+    <img src="images/limechat/server.png" alt="LimeChat Server Properties">
+
+    <p>If you want to use SSL encryption, change the <strong>Port</strong> to <samp>6697</samp> and check the <strong>SSL connection</strong> checkbox.</p>
+
+    <p>If you have a <a href="https://desertbus.org/donor" target="_blank">Desert Bus Donor Account</a> (and if you don't, <a href="https://desertbus.org/donor/sign-up" target="_blank">get one</a>) you can easily log in every time you connect to the network. Simply enter your donor e-mail address into the <strong>Login name</strong> field, your password into the <strong>Nickserv Password</strong> field, and click the <strong>Use SASL</strong> checkbox. If you need to change the nickname to match your registered nick, update the <strong>Nickname</strong> and <strong>Real name</strong> fields.</p>
+</div>
+</body>
+</html>
