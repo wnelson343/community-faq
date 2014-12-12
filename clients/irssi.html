@@ -15,10 +15,47 @@
 
     <h1>Using Irssi to Access the Desert Bus Chat</h1>
 
-    <p>Irssi is a popular IRC client amongst enthusiasts, but not the easiest for new users.  If you use Irssi, here are some tips to get up and running with the Desert Bus Chat quickly.</p>
+    <p>Irssi is a popular command line IRC client amongst enthusiasts, but not the easiest for new users. It has several benefits, from being combined with other programs for enabling an always on IRC client regardless if you are logged into your machine, to being highly configurable and adaptable with plugins.</p>
+	
+	<p>If you would like to use Irssi, here are some tips to get up and running with the Desert Bus Chat quickly.</p>
 
     <ol>
-        <li>First, (optionally) add some handy aliases so that /bid and /ns etc. work as they should (the first is the most important):
+		<li><h3>Starting Irssi:</h3>
+		<p>Assuming you've installed irssi...</p>
+			<ul>
+				<li>On *nix machines, get to a terminal window and type <span class="cmd">irssi</span>
+				</li>
+				<li>On Mac, (someone with experience edit)
+				</li>
+				<li>On Windows Machines, find wherever you extracted the program files to, and run <span class="cmd">irssi.cmd</span>
+				</li>
+			</ul>
+		</li>
+		<p>
+			To add DesertBus to the irssi configuration file so you don't have to remember anything, you need to follow a 2-step process. The first step defines a network and sets the nick you are going to use on it. The second step defines the server details of the network, and attaches it to the network definition.
+		</p>
+		<p>
+			Once the two steps are completed, when irssi starts again, it will automatically connect to the defined network and related server.
+		</p>
+		
+        <li><h3>Add a network:</h3>
+            <ul>
+                <li><span class="cmd">/network add -nick <span class="placeholder">YourNickname</span> DesertBus</span></li>
+            </ul>
+        </li>
+        <li><h3>Add the server:</h3>
+            <ul>
+                <li><span class="cmd">/server add -ssl -auto -network DesertBus irc.desertbus.org 6697 <span class="placeholder">your.email@example.com</span>:<span class="placeholder">secretpassword</span></span></li>
+            </ul>
+            <ul><b>Important:</b> use the email address and password of your <b>donor account</b>
+			</ul>
+			<ul><b>Note:</b> <span class="cmd">-auto</span> in this command tells Irssi to automatically connect to the Desert Bus chat on startup; if you would prefer not to do this, remove <span class="cmd">-auto</span>
+			</ul>
+			<ul><b>Note:</b> if you make a mistake <span class="cmd">/server list</span> will list what you've done, and <span class="cmd">/server remove (server name)</span> should remove incorrect entries
+			</ul>
+        </li>
+		<li><h3>Aliases:</h3>
+		<p>Optionally, add some handy aliases so that /bid and /ns etc. work as they should (the first is the most important)</p>
             <ul>
                 <li><span class="cmd">/alias bid quote bid</span></li>
                 <li><span class="cmd">/alias ns quote ns</span></li>
@@ -27,31 +64,20 @@
                 <li><span class="cmd">/alias bidserv quote bidserv</span></li>
                 <li><span class="cmd">/alias bs quote bs</span></li>
             </ul>
-        </li>
-        <li>Add a network:
-            <ul>
-                <li><span class="cmd">/network add -nick <span class="placeholder">YourNickname</span> DesertBus</span></li>
-            </ul>
-        </li>
-        <li>Add the server:
-            <ul>
-                <li><span class="cmd">/server add -ssl -auto -network DesertBus irc.desertbus.org 6697 <span class="placeholder">your.email@example.com</span>:<span class="placeholder">secretpassword</span></span></li>
-            </ul>
-            &mdash; use the email address and password of your <b>donor account</b>
-            <p>Note: <span class="cmd">-auto</span> in this command tells Irssi to automatically connect to the Desert Bus chat on startup; if you would prefer not to do this, remove <span class="cmd">-auto</span></p>
-        </li>
-        <li>Optionally, to hide joins, quits, etc. on the chat (which gets very busy during Desert Bus):
+		</li>
+        <li><h3>Cleanup the Chat:</h3>
+			<p>Optionally, to hide joins, quits, etc. on the chat (which gets very busy during Desert Bus)</p>
             <ul>
                 <li><span class="cmd">/ignore -channels #desertbus * JOINS PARTS QUITS NICKS</span></li>
                 <li><span class="cmd">/ignore -channels #desertbus ChanServ MODES</span></li>
             </ul>
         </li>
-        <li>Save your configuration:
+        <li><h3>Save your configuration:</h3>
             <ul>
                 <li><span class="cmd">/save</span></li>
             </ul>
         </li>
-        <li>Connect:
+        <li><h3>Connect:</h3>
             <ul>
                 <li><span class="cmd">/connect DesertBus</span></li>
             </ul>
@@ -59,7 +85,65 @@
     </ol>
 
     <p>You should now be in the Desert Bus chat; enjoy!</p>
-
+	
+	<h3>Using Irssi</h3>
+	
+	<h4>The <span class="cmd">/help</span> command</h4>
+		<p>You can find out about the various commands in irssi by using <span class="cmd">/help</span> to list the main commands, and <span class="cmd">/help <span class="placeholder">irssiCommand</span></span>.
+		</p>
+	
+	<h4>Windows</h4>
+		<p>Irrsi uses the concept of windows to keep track of where things are. Generally, window 1 holds all the network/server details and displays configuration commands and their output. Channel output, such as Desert Bus will generally be in windows 2 and onwards.
+		</p>
+	<ul>
+		<li><span class="cmd">/window <span class="placeholder">#</span></span>
+			<p>You can use the above command to move between the windows. You can also, unless otherwise configured, use <span class="cmd">alt + left/right</span> and <span class="cmd">alt + numkey</span>.
+		</p>
+		</li>
+		<li><span class="cmd">/window close</span>
+		</li>
+		<li><span class="cmd">/window move</span>
+			<p>
+			</p>
+		</li>
+		<li><span class="cmd"></span>
+		</li>
+	</ul>
+	
+	
+	<h4>Customising Irssi</h4>
+	<p>Irssi can be customised by exploring the <span class="cmd">/set</span> command. You can set such things as logging preferences, the time display, your default nick and username, and more.
+	</p>
+	<ul>
+		<li><span class="cmd">/set timestamp_format</span>
+			<p>Default is <span class="cmd">%H:%M</span>, you can change to <span class="cmd">%H:%M:%S</span> to display seconds, handy during bidding wars, and other configurations including days, months and years.</p>
+		</li>
+		<li><span class="cmd">/set autolog ON</span>
+			<p>Turns autolog functionality on, keeps a record of all activity you see in your channels</p>
+		</li>
+		<li><span class="cmd">/set scrollback_time</span>
+			<p>Set how much scrollback you want Irssi to keep, default is <span class="cmd">1day</span></p>
+		</li>
+	</ul>
+	
+	<h4>Hilighting</h4>
+	
+	<p>You can hilight text, users, etc in Irssi with the <span class="cmd">/hilight</span> command.
+	</p>
+	<ul>
+		<li><span class="cmd">/hilight <span class="placeholder">word</span></span>
+		<p>This will hilight <span class="placeholder">word</span> whenever it appears in a message</p>
+		</li>
+		<li><span class="cmd">/hilight -mask <span class="placeholder">nick</span>!*@*</span>
+		<p>This will hilight all messages from the user <span class="placeholder">nick</span></p>
+		</li>
+		<li><span class="cmd">-nick</span>, <span class="cmd">-word</span>, and <span class="cmd">-line</span>
+		<p>You can modify how hilight behaves on each command with the above variables. For instance if you want only the word you're looking for hilighted in a message, use <span class="cmd">/hilight -word x</span></p>
+		</li>
+	</ul>
+	
+	<h4>The Always On Client</h4>
+	<p>Particularly on *nix machines, when combined with programs like screen or tmux, and remote login with ssh, your irssi session can become your always on client, accessible from anywhere with the right network settings, keeping you always connected to Desert Bus, and Loading Ready Run's twitch chat as well.</p>
 </div>
 
 </body>
